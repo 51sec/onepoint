@@ -1,14 +1,19 @@
 # OnePoint
 
+A light weight, supporting multple platform and multiple cloud disk driver's file insex (manage) program.
+
 一个轻量级、多平台、多网盘的文件目录索引(和管理)工具。
 
+
+Original github address: https://github.com/ukuq/onepoint
 项目地址：https://github.com/ukuq/onepoint
 
-## 项目特点
+## Program features:
 
+light weight, supporting multple platform and multiple cloud disk drive
 轻量级、多平台、多网盘
 
-## 支持云盘
+## Support following cloud drivers:
 
 - onedrive
   
@@ -46,7 +51,7 @@
 
   通过refresh_token访问
 
-## 快速部署
+## Quick Deployment
 
 ### github 测试版(2.0.0)
 
@@ -58,15 +63,17 @@ npm start
 # pm2 lib/starters/node-http.js
 ~~~
 
-## cloudflare 部署
+## cloudflare Deployment
 
-参考：worker/README.md
+Reference：worker/README.md
 
 ## Demo
 
 https://onepoint.onesrc.workers.dev/
+https://od.51sec.org
 
-## 更新说明
+
+## Updates
 
 ### 210620
 
