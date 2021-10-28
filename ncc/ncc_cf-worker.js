@@ -2298,7 +2298,7 @@ class SharePoint {
 const { _P } = __nccwpck_require__(166);
 module.exports = {
     get params() {
-        return [_P('nothing', '', '文件挂载专用，可用于补充挂载文件，请不要填写此选项', 7, '', false, false)];
+        return [_P('nothing', '', 'Used for file mount only，and can be used to mount file later，please do not fill this option', 7, '', false, false)];
     },
     async handle(_, data, cache, ctx) {
         return this[data.command](data, cache, ctx);
@@ -2483,42 +2483,42 @@ module.exports = {
 
 const e = {
     ItemNotExist({ path }) {
-        return `文件(夹)${path || '?'}不存在`;
+        return `File or Folder ${path || '?'} does not exist`;
     },
     Unauthorized({ field, type }) {
         let s = '';
         if (type === 'empty') {
-            s = '为空,请输入后重试';
+            s = 'is empty, please reenter';
         } else if (type === 'invalid') {
-            s = '已过期或不合法,请重新认证';
+            s = 'has expired,please reauthenticate';
         } else if (type === 'wrong') {
-            s = '有误,请重新输入';
+            s = 'is wrong, please reenter';
         }
-        return `字段${field}${s}`;
+        return `Field ${field}${s}`;
     },
     CommandNotAllowed({ command }) {
-        return `暂不支持${command}命令`;
+        return `Not support ${command} command`;
     },
     DriveNotExist({ path }) {
-        return `路径${path}下未配置云盘`;
+        return `Path ${path} does not configure cloud driver`;
     },
     ModuleNotExist({ module }) {
-        return `模块${module}不存在`;
+        return `Module ${module} does not exist`;
     },
     InvalidPage({ page }) {
-        return `分页参数${page}不合法`;
+        return `Page parameter ${page} is invalid`;
     },
     ItemIsFile({ path }) {
-        return `路径${path || '?'}对应一个文件,请注意path格式`;
+        return `Path ${path || '?'} is similar as file name, please pay attehntion to path format`;
     },
     ConfigError({ fields }) {
-        return `参数配置有误,请注意一下这些参数[${fields.toString()}]`;
+        return `Parameter is configured wrong, please pay attention to parameter(s) [${fields.toString()}]`;
     },
     ModuleError(msg) {
-        return `模块内部错误: ${msg || '???'}`;
+        return `Internal module error: ${msg || '???'}`;
     },
     ReadError({ msg }) {
-        return `配置读取失败: ${msg}`;
+        return `Read configuration failed: ${msg}`;
     },
     SaveError({ msg }) {
         return `配置保存失败: ${msg}`;
@@ -3961,9 +3961,9 @@ $$out+="\" controls autoplay style=\"width:75%\" class=\"rounded mx-auto d-block
 }else if(type === 'office'){
 $$out+=" <ul style=\"margin:0\"><li><a target=\"_blank\" href=\"https://view.officeapps.live.com/op/view.aspx?src="
 $$out+=$escape($V.encodeURIComponent(url))
-$$out+="\">使用 office apps 预览</a></li><li><a target=\"_blank\" href=\"http://api.idocv.com/view/url?url="
+$$out+="\">using office apps to preview</a></li><li><a target=\"_blank\" href=\"http://api.idocv.com/view/url?url="
 $$out+=$escape($V.encodeURIComponent(url))
-$$out+="\">使用 I Doc View 预览</a></li></ul> "
+$$out+="\">Using I Doc View to preview</a></li></ul> "
 }else if(type==='pdf'){
 $$out+=" <div id=\"op-preview-pdf\" data-url=\""
 $$out+=$escape(url)
@@ -3973,11 +3973,11 @@ $$out+=" <pre><code id=\"op-preview-text\" data-url=\""
 $$out+=$escape(url)
 $$out+="\">loading...</code></pre><link href=\"//cdn.staticfile.org/highlight.js/10.4.1/styles/xcode.min.css\" rel=\"stylesheet\"><script src=\"//cdn.staticfile.org/highlight.js/10.4.1/highlight.min.js\"></script><script>document.querySelectorAll(\"#op-preview-text\").forEach(t=>{fetch(t.getAttribute(\"data-url\")).then(t=>t.ok?t.text():Promise.reject(new Error(\"response error\"))).then(e=>{t.textContent=e,hljs.highlightBlock(t)}).catch(e=>t.textContent=\"Oh, \"+e)})</script> "
 }else if(type==='bigText'){
-$$out+=" <p style=\"text-align:center\" class=\"mb-0\">该文本文件太大, 不支持预览 :-(</p> "
+$$out+=" <p style=\"text-align:center\" class=\"mb-0\">This file is too large to preview :-(</p> "
 }else{
-$$out+=" <p style=\"text-align:center\" class=\"mb-0\">此格式("
+$$out+=" <p style=\"text-align:center\" class=\"mb-0\">This format("
 $$out+=$escape($V.file.mime)
-$$out+=")不支持预览 :-(</p> "
+$$out+=")does not support preview :-(</p> "
 }
 $$out+=" </div><script src=\"https://cdn.staticfile.org/clipboard.js/2.0.8/clipboard.min.js\"></script><script>document.querySelectorAll(\"#op-share-url\").forEach(e=>{e.value=new URL(\"?\",window.location).href.slice(0,-1),new ClipboardJS(\"#op-share-btn\")})</script> "
 }else{
