@@ -3943,13 +3943,13 @@ $$out+=" "
 var url=$V.downloadUrl
 $$out+=" "
 var oUrl=$V.previewHref($V.file,false)
-$$out+=" <div class=\"input-group\"><input type=\"url\" class=\"form-control\" id=\"op-share-url\"><div class=\"input-group-append\"><button type=\"button\" class=\"btn btn-outline-secondary\" id=\"op-share-btn\" data-clipboard-target=\"#op-share-url\" data-clipboard-action=\"cut\">复 制</button> <a type=\"button\" class=\"btn btn-outline-secondary\" href=\""
+$$out+=" <div class=\"input-group\"><input type=\"url\" class=\"form-control\" id=\"op-share-url\"><div class=\"input-group-append\"><button type=\"button\" class=\"btn btn-outline-secondary\" id=\"op-share-btn\" data-clipboard-target=\"#op-share-url\" data-clipboard-action=\"cut\">Copy</button> <a type=\"button\" class=\"btn btn-outline-secondary\" href=\""
 $$out+=$escape(oUrl)
-$$out+="\" target=\"_blank\">下 载</a></div></div><div class=\"border rounded my-3 p-3\" id=\"op-file\"> "
+$$out+="\" target=\"_blank\">Download</a></div></div><div class=\"border rounded my-3 p-3\" id=\"op-file\"> "
 if(type === 'image'){
 $$out+=" <img src=\""
 $$out+=$escape(url)
-$$out+="\" class=\"rounded mx-auto d-block img-fluid\" max-width=\"100%\" alt=\"图片加载失败\"> "
+$$out+="\" class=\"rounded mx-auto d-block img-fluid\" max-width=\"100%\" alt=\"Image failed to load\"> "
 }else if(type === 'video' || $V.file.name.endsWith('.m3u8')){
 $$out+=" <div id=\"op-preview-video\" data-url=\""
 $$out+=$escape(url)
