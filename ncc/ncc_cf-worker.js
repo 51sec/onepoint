@@ -112,18 +112,14 @@ const config = {
 };
 
 const configTemplate = {
-    html: '<div>这是一段自定义html，你也可以在这里放置一些脚本文件</div>',
+    html: '<div>Customized HTML Section</div>',
     logo: 'https://cdn.onesrc.cn/uploads/images/onepoint_30.png',
     name: 'DemoSite',
-    readme: `## 部署成功
-
-恭喜部署成功，但这并不意味着系统能使用了
-
-接下来，你需要进入 [admin](/admin/) 页面，完成一些必须的配置
-
-要注意，某些平台的配置参数，可能需要你在平台上自行配置
-
-配置完成后，就可以添加云盘了
+    readme: `## Deployed Successfully
+Congrats for your successful deployment. But it does not mean it is completed for listing your cloud driver's files.
+Next，Please log into [admin](/admin/) page to complete some basic and advanced settings.
+Please keep this in your mind, for some cloud drives in certain platform, it will require some special settings on that platform.
+Once basic configuration done, you can start to add your cloud drives. 
 `,
     cors: ['*'],
     proxy: [],
@@ -153,7 +149,7 @@ const commonMParams = [
     _P('password', '', '', 2, 'drive password', false, false),
     _P('readme', '', '', 2, 'markdown supported', true, false),
     // _P('desc', '', '', 2, 'short desc', false, false),
-    _P('hidden', [], '當前想要隱藏的文件或文件夾，例如 /images/today, /video/something.mp4', 2, '', false, false),
+    _P('hidden', [], 'Current the folder(s) you would like to hide，such as /images/today, /video/something.mp4', 2, '', false, false),
 ];
 config.commonMParams = commonMParams;
 
@@ -659,9 +655,9 @@ api_router.get('config/basic', async (ctx) => {
     const params = op.params;
     if (op.needConfig) {
         [
-            P('admin_salt', String(Math.random()), '签名salt，仅限输入一次，以后不可更改', 9, '', false, false),
-            P('admin_pass', 'admin', '密码', 9, '', false, true),
-            P('admin_name', 'admin', '用户名，仅限输入一次，以后不可更改', 9, '', false, true),
+            P('admin_salt', String(Math.random()), 'siganature salt，only can enter once ，on changes in the future', 9, '', false, false),
+            P('admin_pass', 'admin', 'Password', 9, '', false, true),
+            P('admin_name', 'admin', 'Username，once entered, no changes', 9, '', false, true),
         ].forEach((e) => params.unshift(e));
     }
 
@@ -1803,7 +1799,7 @@ module.exports = {
     get params() {
         return [
             _P('refresh_token', '', '<a href="https://point.onesrc.cn/oauth2/" target="_blank">获取refresh_token</a>', 7, '', false, true),
-            _P('root', '', '默认为根目录;如果想使用子目录,请填写目录id;如果想使用团队盘,请使用团队盘id', 5, 'root', false, false),
+            _P('root', '', 'Default is root folder;If want to use sub-folder, please fill in sub-folder id; If want to use team disk, please use team disk id', 5, 'root', false, false),
             _P('client_id', '', '', 5, '', false, false),
             _P('client_secret', '', '', 5, '', false, false),
         ];
@@ -1947,11 +1943,11 @@ function filter(e) {
 module.exports = {
     get params() {
         return [
-            _P('type', 'com', 'com:国际版 cn:世纪互联特供版', 7, ['com', 'cn'], false, true),
-            _P('refresh_token', '', '<a href="https://point.onesrc.cn/oauth2/" target="_blank">获取refresh_token</a>', 7, '', true, true),
-            _P('share_url', '', 'OneDrive分享链接', 7, 'https://{?}-my.sharepoint.com/:f:/g/personal/{?}/{?}', false, true),
+            _P('type', 'com', 'com:International cn:China 世纪互联特供版', 7, ['com', 'cn'], false, true),
+            _P('refresh_token', '', '<a href="https://point.onesrc.cn/oauth2/" target="_blank">Click here acquire refresh_token</a>', 7, '', true, true),
+            _P('share_url', '', 'OneDrive sharing url', 7, 'https://{?}-my.sharepoint.com/:f:/g/personal/{?}/{?}', false, true),
             _P('root', '', '', 5, '/', false, false),
-            _P('api_url', '', 'sharepoint 使用此项', 5, 'https://graph.microsoft.com/v1.0/sites/{site-id}/drive/', false, false),
+            _P('api_url', '', 'sharepoint use this option', 5, 'https://graph.microsoft.com/v1.0/sites/{site-id}/drive/', false, false),
             _P('client_id', '', '', 5, '', false, false),
             _P('client_secret', '', '', 5, '', false, false),
             _P('refresh_etime', Date.now() + 3600 * 24 * 10 + '', '', 1, { hidden: true }, false, false),
@@ -4005,7 +4001,7 @@ $$out+="</div><script src=\"https://cdn.staticfile.org/marked/2.0.3/marked.min.j
 if($V.readmeUrl){
 $$out+=" <script>document.querySelectorAll(\"#op-readme\").forEach(e=>fetch(e.getAttribute(\"data-url\")).then(e=>e.ok?e.text():Promise.reject(new Error(\"response error\"))).then(r=>e.innerHTML=marked(r)).catch(r=>e.innerHTML=\"Oh, \"+r))</script> "
 }
-$$out+=" </div><div class=\"text-right py-3 pl-3\"><a class=\"text-muted\" target=\"_blank\" href=\"https://github.com/ukuq/onepoint\">Just One Point.</a> <a class=\"text-muted ml-2\" href=\""
+$$out+=" </div><div class=\"text-right py-3 pl-3\"><a class=\"text-muted\" target=\"_blank\" href=\"https://github.com/51sec/onepoint\">51Sec OnePoint.</a> <a class=\"text-muted ml-2\" href=\""
 $$out+=$escape($V.refreshHref)
 $$out+="\">Cache "
 $$out+=$escape($V.cacheTime?'Hit':'Miss')
@@ -4134,7 +4130,7 @@ function initApp() {
         return KVConfig.put('op-config', JSON.stringify(config));
     }
 
-    const h = '注意，必需新建KV，并将其绑定到对应的 Workers KV Namespace，绑定的名称为OPCONFIG';
+    const h = 'Attention，Had to create KV first，and bind it to Workers KV Namespace，variable name is OPCONFIG when binding';
 
     app.initialize({
         name: 'cf-worker',
