@@ -3883,7 +3883,7 @@ const $imports = __nccwpck_require__(467);module.exports={name:"w.w.art"};module
 'use strict'
 $data=$data||{}
 var $$out='',$escape=$imports.$escape,$V=$data.$V,navs=$data.navs,$each=$imports.$each,$value=$data.$value,$index=$data.$index,response=$data.response,type=$data.type,url=$data.url,oUrl=$data.oUrl
-$$out+="<!DOCTYPE html><html lang=\"zh-CN\"><head><meta charset=\"utf-8\"><meta name=\"github\" content=\"https://github.com/ukuq/onepoint\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1,shrink-to-fit=no\"><link rel=\"shortcut icon\" href=\""
+$$out+="<!DOCTYPE html><html lang=\"zh-CN\"><head><meta charset=\"utf-8\"><meta name=\"github\" content=\"https://github.com/51sec/onepoint\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1,shrink-to-fit=no\"><link rel=\"shortcut icon\" href=\""
 $$out+=$escape($V.site.logo)
 $$out+="\"><meta name=\"referrer\" content=\"same-origin\"><link href=\"//cdn.staticfile.org/twitter-bootstrap/4.6.0/css/bootstrap.min.css\" rel=\"stylesheet\"><link href=\"//cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css\" rel=\"stylesheet\"><title>"
 $$out+=$escape($V.site.name)
@@ -4027,7 +4027,7 @@ module.exports = {
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"author":"ukuq","bugs":{"url":"https://github.com/ukuq/onepoint/issues"},"dependencies":{},"description":"a tiny file index and manage program","devDependencies":{"@vercel/ncc":"^0.28.6","art-template":"^4.13.2","eslint":"^7.16.0","eslint-config-prettier":"^7.1.0","eslint-plugin-prettier":"^3.3.0","html-minifier-terser":"^5.1.1","prettier":"^2.2.1"},"files":["lib"],"homepage":"https://github.com/ukuq/onepoint#readme","keywords":["onepoint","onedrive","google-drive","scf","serverless"],"license":"MIT","main":"lib/app.js","name":"onepoint","prettier":{"printWidth":233,"singleQuote":true,"tabWidth":4,"trailingComma":"es5"},"repository":{"type":"git","url":"git+https://github.com/ukuq/onepoint.git"},"scripts":{"__local_start":"node lib/starters/local-test.js","__pre_commit":"node tmp/pre-commit.js","build:ncc":"node ncc/build.js","format":"eslint \\"**/*.js\\" --fix && prettier \\"**/*.{js,json}\\" --write","format:check":"eslint \\"**/*.js\\" && prettier \\"**/*.{js,json}\\" --check","start":"node lib/starters/node-http.js"},"version":"2.0.1","version2":"210620"}');
+module.exports = JSON.parse('{"author":"ukuq","bugs":{"url":"https://github.com/51sec/onepoint/issues"},"dependencies":{},"description":"a tiny file index and manage program","devDependencies":{"@vercel/ncc":"^0.28.6","art-template":"^4.13.2","eslint":"^7.16.0","eslint-config-prettier":"^7.1.0","eslint-plugin-prettier":"^3.3.0","html-minifier-terser":"^5.1.1","prettier":"^2.2.1"},"files":["lib"],"homepage":"https://github.com/51sec/onepoint#readme","keywords":["onepoint","onedrive","google-drive","scf","serverless"],"license":"MIT","main":"lib/app.js","name":"onepoint","prettier":{"printWidth":233,"singleQuote":true,"tabWidth":4,"trailingComma":"es5"},"repository":{"type":"git","url":"git+https://github.com/51sec/onepoint.git"},"scripts":{"__local_start":"node lib/starters/local-test.js","__pre_commit":"node tmp/pre-commit.js","build:ncc":"node ncc/build.js","format":"eslint \\"**/*.js\\" --fix && prettier \\"**/*.{js,json}\\" --write","format:check":"eslint \\"**/*.js\\" && prettier \\"**/*.{js,json}\\" --check","start":"node lib/starters/node-http.js"},"version":"2.0.1","version2":"210620"}');
 
 /***/ }),
 
