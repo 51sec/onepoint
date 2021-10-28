@@ -1,24 +1,24 @@
-## Cloudflare Workers 部署
+## Cloudflare Workers Deploymnet
 
-### 新建 Worker
+### Create a new Worker
 ![image.png](https://i.loli.net/2021/02/19/5tsTuklZUDWSIix.png)
 
-### 粘贴代码
+### Copy / Paste the code
 
-https://github.com/ukuq/onepoint/blob/master/ncc/ncc_cf-worker.js
+https://github.com/ukuq/51sec/blob/master/ncc/ncc_cf-worker.js
 
-或者 https://raw.githubusercontent.com/ukuq/onepoint/master/ncc/ncc_cf-worker.js
+Or https://raw.githubusercontent.com/51sec/onepoint/master/ncc/ncc_cf-worker.js
 
-代码较多，保存可能要费点时间，不要心急！
+
 
 ![image.png](https://i.loli.net/2021/02/19/92xyFLK5dOrWk4s.png)
 
-### 返回上一级，新建KV桶，名字随意
+### From Cloudflare workers page, create KV namespace. Any any name to your new namespace.
 
 ![image.png](https://i.loli.net/2021/02/19/Ep2rmbQN9y1TFDI.png)
 ![image.png](https://i.loli.net/2021/02/19/WfnypotgmCHuPqh.png)
 
-### 绑定KV桶，变量名设置为OPCONFIG
+### Go back to your new created worker page, binding KV with it，Set the variable name to OPCONFIG during binding.
 
 ![image.png](https://i.loli.net/2021/02/19/W6MOmlRYTi53oQZ.png)
 
@@ -26,7 +26,7 @@ https://github.com/ukuq/onepoint/blob/master/ncc/ncc_cf-worker.js
 
 https://onepoint.onesrc.workers.dev/
 
-### DEV
+https://od.51sec.org
 
-如需修改代码，可以 git clone，修改前后使用 ncc 打包
+
 
