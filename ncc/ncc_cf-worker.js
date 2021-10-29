@@ -1037,7 +1037,7 @@ module.exports = async (ctx, next) => {
         return;
     }
 
-    if (path === '/favicon.ico') {
+    if (path === '/T51SecEU/Sharing/Photos/favicon.ico') {
         ctx.redirect(op.config.site.logo);
         ctx.response.status = 301;
         return;
@@ -3826,7 +3826,7 @@ const $imports = __nccwpck_require__(467);module.exports={name:"simple.art"};mod
 'use strict'
 $data=$data||{}
 var $$out='',$escape=$imports.$escape,$V=$data.$V,navs=$data.navs,$each=$imports.$each,$value=$data.$value,$index=$data.$index,response=$data.response
-$$out+="<!DOCTYPE html><html lang=\"zh-CN\"><head><meta charset=\"utf-8\"><link rel=\"shortcut icon\" href=\""
+$$out+="<!DOCTYPE html><html lang=\"en\"><head><meta charset=\"utf-8\"><link rel=\"shortcut icon\" href=\""
 $$out+=$escape($V.site.logo)
 $$out+="\"><title>"
 $$out+=$escape($V.site.name)
@@ -3883,7 +3883,7 @@ const $imports = __nccwpck_require__(467);module.exports={name:"w.w.art"};module
 'use strict'
 $data=$data||{}
 var $$out='',$escape=$imports.$escape,$V=$data.$V,navs=$data.navs,$each=$imports.$each,$value=$data.$value,$index=$data.$index,response=$data.response,type=$data.type,url=$data.url,oUrl=$data.oUrl
-$$out+="<!DOCTYPE html><html lang=\"zh-CN\"><head><meta charset=\"utf-8\"><meta name=\"github\" content=\"https://github.com/51sec/onepoint\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1,shrink-to-fit=no\"><link rel=\"shortcut icon\" href=\""
+$$out+="<!DOCTYPE html><html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"github\" content=\"https://github.com/51sec/onepoint\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1,shrink-to-fit=no\"><link rel=\"shortcut icon\" href=\""
 $$out+=$escape($V.site.logo)
 $$out+="\"><meta name=\"referrer\" content=\"same-origin\"><link href=\"//cdn.staticfile.org/twitter-bootstrap/4.6.0/css/bootstrap.min.css\" rel=\"stylesheet\"><link href=\"//cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css\" rel=\"stylesheet\"><title>"
 $$out+=$escape($V.site.name)
